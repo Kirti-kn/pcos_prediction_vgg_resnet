@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Abyssinica SIL:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-2">
+
+      <div class="image-holder-icon">
+        <img class="custom_image" alt="img" src="{{ image_source }}" />
+      </div>
+
+      <!-- Non_pcos -->
+      {% if predicted_class=='Non_pcos' %}
+        <h3 class="prediction"><b>Prediction:</b> No PCOS symptoms detected.</h3>
+        <div class="questions-parent" id="about">
+            <h6 class="questions"></h6>
+            <p class="txt">There doesn't seem any kind of PCOS symptoms on your face. Keep maintaining the skin with proper lifestyle and habits. You can check for symptoms in other parts of your body like 
+              <ul style="text-align: left;">
+                <li>receeding hair line</li>
+                <li>excessive hair hair growth in other parts of the body.</li>
+                <li>Dark patches on the neck and others parts of the body (Acanthosis Nigricans)</li>
+              </ul>
+             </p>
+        </div>
+
+      <!-- AN   -->
+      {% elif predicted_class=='AN' %}  
+        <h3 class="prediction"><b>Prediction:</b> Acanthosis Nigricans(PCOS symptom detected)</h3>
+        <div class="questions-parent" id="about">
+            <h6 class="questions">What is Acanthosis Nigricans?</h6>
+            <p class="txt">Acanthosis nigricans is a skin condition characterized by dark, thickened patches of skin. The dark, thickened patches of skin associated with acanthosis nigricans most commonly appear in body folds and creases, such as the neck, armpits, groin, and skin around the breasts.
+            </p>
+            <h6 class="questions">Why it happens?</h6>
+            <p class="txt">It is commonly associated with insulin resistance. Insulin resistance occurs when the body's cells do not respond effectively to the hormone insulin, resulting in higher levels of insulin in the blood. Elevated insulin levels can trigger the growth of skin cells and stimulate the production of skin pigment, leading to the development of acanthosis nigricans</p>
+            <h6 class="questions">How to cure it?</h6>
+            <p class="txt">Acanthosis nigricans itself does not have a specific cure since it is usually a symptom or a sign of an underlying condition.<br>
+              Lifestyle modifications are often recommended. These can include:
+              <ul style="text-align: left;">
+                <li>Weight loss</li>
+                <li>Healthy diet</li>
+                <li>Physical activity</li>
+                <li>Medications by healthcare professionals.</li>
+              </ul>
+            </p>
+        </div>
+      
+      <!-- FACIAL HAIRS   -->
+      {% elif predicted_class=='facial_hair' %}
+        <h3 class="prediction"><b>Prediction:</b> Hirsutism (PCOS symptom detected)</h3>
+        <div class="questions-parent" id="about">
+            <h6 class="questions">What is Hirsutism?</h6>
+            <p class="txt">Hirsutism is a condition characterized by excessive hair growth in women in areas typically associated with male hair patterns, such as the face, chest, back, or abdomen. It can be a source of distress and can affect self-esteem and body image.</p>
+            <h6 class="questions">Why it happens?</h6>
+            <p class="txt">Hirsutism occurs due to an increased production or sensitivity to androgens, which are male sex hormones present in both men and women. The most common cause of hirsutism is an underlying hormonal imbalance, such as an increased production of androgens or an increased sensitivity of hair follicles to androgens.</p>
+            <h6 class="questions">How to cure it?</h6>
+            <p class="txt">
+              <ul>
+                <li><u>Prescription creams:</u> Topical creams containing eflornithine can be prescribed to reduce the rate of hair growth. </li>
+                <li><u>Nutritional supplements:</u> Some studies suggest that certain nutritional supplements may help regulate hormone levels and reduce hirsutism.</li>
+                <li><u>Medications:</u> Depending on the cause and severity of hirsutism, medications may be prescribed to regulate hormone levels, such as oral contraceptives (birth control pills) or anti-androgen medications. </li>
+                <li><u>Hair removal methods:</u> Various methods can be used to remove or reduce unwanted hair. </li>
+                <li><u>Lifestyle modifications:</u> In cases where hirsutism is associated with conditions like PCOS, lifestyle changes can be beneficial.</li>
+                <li><u>Counseling and support:</u> Hirsutism can have emotional and psychological effects. Seeking support from a therapist or counselor can help individuals cope with the condition and address any body image concerns.</li>
+              </ul>
+            </p>
+        </div>
+
+      <!-- ACNE   -->
+      {% elif predicted_class=='acne' %}
+          <h3 class="prediction" style="align-content: center;">
+            <b>Prediction:</b>
+            <span style="font-size: smaller;">Acne(PCOS symptom detected)</span>
+          </h3>
+          <div class="questions-parent" id="about">
+              <h6 class="questions">What is Acne?</h6>
+              <p class="txt">Acne related to polycystic ovary syndrome (PCOS) is a common manifestation of the hormonal imbalances associated with the condition. PCOS can cause an increase in androgen hormone levels, such as testosterone, which can lead to the development of acne.</p>
+              <h6 class="questions">Why it happens?</h6>
+              <p class="txt">
+                <ul class="txt">
+                  <li>
+                    <u>Increased androgen levels:</u> Women with PCOS often have higher levels of androgens, which can stimulate the sebaceous glands in the skin to produce more oil (sebum). Excess sebum can clog hair follicles and contribute to the development of acne
+                  </li>
+                  <li><u>Insulin resistance:</u> Insulin resistance, a common feature of PCOS, can lead to elevated insulin levels in the blood. High insulin levels can trigger the production of androgens, exacerbating acne.</li>
+                </ul>
+              </p>
+              <h6 class="questions">How to cure it?</h6>
+              <p class="txt">
+                <ul>
+                  <li>
+                    <u>Skincare routine:</u> 
+                    It typically involves gentle cleansing of the skin twice daily, followed by the application of non-comedogenic moisturizers and oil-free, non-acnegenic products. Avoiding harsh or abrasive cleansers and over-washing the face is important to prevent skin irritation.</li>
+                  <li><u>Topical treatments:</u> Over-the-counter or prescription topical treatments can be used to target acne. These may include products containing ingredients like benzoyl peroxide, salicylic acid, or retinoids, which help to unclog pores, reduce inflammation, and control bacterial growth</li>
+                  <li><u>Hormonal therapies:</u>Oral contraceptives (birth control pills) containing estrogen and progestin can help regulate hormone levels, reduce androgen production, and improve acne. Anti-androgen medications, such as spironolactone, can also be prescribed to block the effects of androgens on the skin.</li>
+                </ul>
+              </p>
+          </div>
+      {% endif %}  
+      <form action="/">
+        <button class="image-1" id="image1"></button>
+      </form>
+    </div>
+
+  </body>
+</html>

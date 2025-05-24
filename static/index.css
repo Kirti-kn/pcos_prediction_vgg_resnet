@@ -1,0 +1,400 @@
+html, body{
+  height: 100%;
+}
+
+.desktop-1-child {
+  position: absolute;
+  top: 277.65px;
+  left: 444px;
+  border-radius: var(--br-35xl);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 0, 0, 0) 2.48%,
+    rgba(9, 0, 0, 0.12)
+  );
+  width: 577px;
+  height: 460px;
+  transform: rotate(-0.26deg);
+  transform-origin: 0 0;
+}
+
+.desktop-1-item {
+  position: absolute;
+  top: 44px;
+  left: 130px;
+  border-radius: 50%;
+  width: 331px;
+  height: 301px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.upload-your-image {
+  margin: 0;
+  position: absolute;
+  top: 132px;
+  left: 218px;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 81px;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.camera {
+  background-color: var(--color-gainsboro);
+  top: 74px;
+  left: 93px;
+  border-radius: var(--br-35xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 374px;
+  height: 70px;
+  font-size: 25px;
+  letter-spacing: 0.04em;
+  font-family: var(--font-actor);
+  color: var(--color-black);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.camera input[type="image"], .file input[type="file"]{
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: scale(5);
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+  .camera,
+.file {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  transition: box-shadow 0.5s ease;
+  overflow: hidden;
+}
+  
+.file {
+  background-color: var(--color-gainsboro);
+  top: 198px;
+  left: 93px;
+  border-radius: var(--br-35xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 374px;
+  height: 70px;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-actor);
+  color: var(--color-black);
+  text-align: center;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.file input[type="file"]{
+  cursor: pointer;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: scale(3);
+  opacity: 0;
+}
+
+.camera:hover, .file:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.3);
+  
+}
+
+.or{
+  position: absolute;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 157px;
+  left: 240px;
+  width: 71px;
+  height: 28px;
+}
+
+.upload {
+  border: 0;
+  padding: 0;
+  background-color: #1fa0d7;
+  top: 322px;
+  left: 175px;
+  border-radius: var(--br-35xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 210px;
+  height: 58px;
+  cursor: pointer;
+  position: absolute;
+  font-size: var(--font-size-11xl);
+  letter-spacing: 0.04em;
+  font-family: var(--font-ropa-sans);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow, background-color 0.4s ease;
+}
+
+.upload:hover{
+  background-color: #075cb2;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.camera-parent,
+.desktop-1 {
+  background-color: var(--color-white);
+  overflow: hidden;
+  text-align: center;
+}
+
+.camera-parent {
+  position: absolute;
+  top: 273px;
+  left: 441px;
+  border-radius: var(--br-35xl);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  border: 5px solid rgba(0, 0, 0, 0.56);
+  box-sizing: border-box;
+  width: 557px;
+  height: 438px;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-actor);
+}
+
+.desktop-1 {
+  position: relative;
+  width: 100%;
+  height: 841px;
+  font-size: 62px;
+  color: rgba(0, 0, 0, 0.79);
+  font-family: var(--font-aclonica);
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-1-item {
+    width: 260px;
+    height: 250px;
+  }
+  .upload-your-image {
+    font-size: 55px;
+    width: 900px;
+    height: 70px;
+  }
+  .camera {
+    display: flex;
+    width: 374px;
+  }
+  .camera-parent {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .upload-your-image {
+    font-size: 35px;
+    width: 500px;
+  }
+  .camera-parent {
+    width: 500px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .desktop-1-item {
+    width: 200px;
+    height: 199px;
+    cursor: default;
+  }
+  .upload-your-image {
+    font-size: var(--font-size-11xl);
+    text-align: left;
+    width: 200px;
+    height: 150px;
+  }
+  .camera-parent {
+    width: 80%;
+  }
+}
+
+/* for prediction page  */
+
+.image-holder-icon {
+  position: absolute;
+  top: 300px;
+  left: 92px;
+  border-radius: 10px;
+  width: 488px;
+  height: 368px;
+  border: 3px solid black;
+  /* object-fit: cover; */
+}
+
+.custom_image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.prediction {
+  margin: 0;
+  position: absolute;
+  top: 150px;
+  /* left: 350px; */
+  letter-spacing: 0.04em;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Add this line to center align the text */
+  word-wrap: break-word;
+  align-items: center;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.txt {
+  position: relative;
+  margin-top: 5%;
+  font-size: var(--font-size-5s);
+  font-family: var(--font-abyssinica-sil);
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+
+ul{
+  font-size: var(--font-size-5s);
+  font-family: var(--font-abyssinica-sil);
+  word-break: break-all;
+  width: 100%;
+  left: 0%;
+  text-align: left;
+}
+
+.questions {
+  font-size: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: inherit;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5%;
+  margin-top: 9%;
+  position: relative; 
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+}
+
+.questions-parent {
+  position: absolute;
+  top: 270px;
+  left: 639px;
+  width: 800px;
+  height: auto;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  font-family: var(--font-adamina);
+}
+
+
+
+.image-1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 54px;
+  left: 77px;
+  border-radius: 54px;
+  width: 78px;
+  height: 77px;
+  background-image: url(./image1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.desktop-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(180deg, #efe0ef, #934ac0);
+  width: 100%;
+  min-height: 100vh; /* Set a minimum height to occupy the full viewport height */
+  overflow: auto;
+  text-align: center;
+  font-size: 50px;
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+#myModal ul{
+  text-align: left;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

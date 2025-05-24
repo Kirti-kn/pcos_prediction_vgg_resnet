@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-ropa-sans: "Ropa Sans";
+    --font-actor: Actor;
+    --font-aclonica: Aclonica;
+    --font-abyssinica-sil: "Abyssinica SIL";
+    --font-adamina: Adamina;
+    --font-poppins: Poppins;
+  
+    /* font sizes */
+    --font-size-11xl: 30px;
+    --font-size-5xl: 24px;
+    --font-size-3xl: 22px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gainsboro: #d9d9d9;
+  
+    /* border radiuses */
+    --br-35xl: 54px;
+  }
+
+  
+  
