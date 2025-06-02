@@ -11,10 +11,13 @@
 - After successfully setting up, run the 'app.py' file.   
 
 ### RESNET (training/validation curves)
-[(resnet_output.png)]
+[!(resnet_output.png)]
 
 ### VGG-16 (training/validation curves)
-[(vgg_output.png)]
+[!(vgg_output.png)]
 
 ### WHY PERFORMANCE OF RESNET IS POOR?
 - Resnet need a large dataset to predict accurately. In this case, as dataset size not large due to being handpicked, resnet performed poorly. Whereas, VGG-16 works great with small dataset, hence it performed better.
+
+### DEMO VIDEO:
+https://youtu.be/TU_NF7x_uEc
