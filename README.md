@@ -1,4 +1,6 @@
 # PCOS_prediction
+
+### CUSTOM CNN
 - To use the model properly, create the 'pcos_module.h5' file and keep it in the same folder as 'app.py'.
 - You can create the 'pcos_module.h5' file by two ways: <br>
   i) you can directly download the link of the model from the google drive link: https://drive.google.com/file/d/1NUn-JWigfMh56SJ__qSRGw1Qrl8ct6Sw/view?usp=sharing <br> keep the 'pcos_module.h5' file in the same folder as 'app.py'. Make sure to extract the file if it is downloaded as a zip file. ( The size of file is large due to which I was not able to upload it in the github)<br> <br>
@@ -7,3 +9,12 @@
 
 - Download all the files in this github repo and surely extract all the zip files before running the program.
 - After successfully setting up, run the 'app.py' file.   
+
+### RESNET (training/validation curves)
+[(resnet_output.png)]
+
+### VGG-16 (training/validation curves)
+[(vgg_output.png)]
+
+### WHY PERFORMANCE OF RESNET IS POOR?
+- Resnet need a large dataset to predict accurately. In this case, as dataset size not large due to being handpicked, resnet performed poorly. Whereas, VGG-16 works great with small dataset, hence it performed better.
